@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dashboard — khyal</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body class="app">
+<div class="bg-orbs"><div class="orb o1"></div><div class="orb o3"></div></div>
+<div class="topbar"><div class="wrap">
+  <a class="logo" href="index.html">khyal<span>.</span></a>
+  <div class="right"><span class="who" id="who"></span><button class="btn sm" id="logout" type="button">log out</button></div>
+</div></div>
+
+<main class="page"><div class="wrap">
+  <h1 class="t reveal in" id="hello">hello</h1>
+  <p class="lead">your plan, your details and your projects in one place.</p>
+
+  <div class="msg" id="verifyBar" style="margin:0 0 20px"></div>
+
+  <div class="dgrid">
+    <div class="card c7 reveal" id="planCard"></div>
+    <div class="card c5 reveal" id="detailCard"></div>
+    <div class="card c12 reveal hide" id="payCard"></div>
+    <div class="card c12 reveal"><h3>change / choose plan</h3><div class="plans-mini" id="planPick"></div><div class="msg" id="planMsg"></div></div>
+    <div class="card c6 reveal">
+      <h3>send a new project</h3>
+      <form id="projForm">
+        <label for="p-title">song / project name</label><input id="p-title" required>
+        <label for="p-link">files link (Drive / Dropbox / WeTransfer)</label><input id="p-link" type="url" placeholder="https://">
+        <label for="p-notes">notes (reference track, vibe, tempo…)</label><textarea id="p-notes"></textarea>
+        <button class="btn p" type="submit" style="width:100%;margin-top:18px">submit project</button>
+      </form>
+      <div class="msg" id="projMsg"></div>
+    </div>
+    <div class="card c6 reveal"><h3>my projects <span id="pcount" class="status s-active"></span></h3><div id="projList"></div></div>
+  </div>
+  <p class="foot-links" style="margin-top:30px">need help? <a id="help" href="#">mail khyal</a></p>
+</div></main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="pricing.js"></script>
+<script src="email.js"></script>
+<script src="auth.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>

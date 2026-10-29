@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>admin — khyal</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body class="app">
+<div class="bg-orbs"><div class="orb o1"></div><div class="orb o2"></div></div>
+
+<div id="panel" class="hide">
+  <div class="topbar"><div class="wrap">
+    <a class="logo" href="index.html">khyal<span>.</span> <small style="color:var(--b);font-size:.7rem">admin</small></a>
+    <div class="right"><button class="btn sm" id="csv" type="button">export csv</button><button class="btn sm" id="aOut" type="button">log out</button></div>
+  </div></div>
+  <main class="page"><div class="wrap">
+    <h1 class="t">admin dashboard</h1>
+    <p class="lead">clients, plans and orders at a glance.</p>
+
+    <div class="stat-row" id="stats"></div>
+    <div class="dgrid" style="margin-bottom:22px">
+      <div class="card c6"><h3>plan distribution</h3><div class="dist" id="dist"></div></div>
+      <div class="card c6"><h3>new clients · last 7 days</h3><div class="bars" id="bars"></div></div>
+    </div>
+
+    <div class="card">
+      <h3>all clients <span class="status s-active" id="ccount"></span></h3>
+      <div class="tools">
+        <input id="q" placeholder="search name, email, phone…">
+        <select id="fplan"><option value="">all plans</option></select>
+        <select id="fstat"><option value="">all statuses</option><option>under review</option><option>work started</option><option>completed</option><option>cancelled</option></select>
+      </div>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>client</th><th>contact</th><th>plan</th><th>status</th><th>projects</th><th>joined</th><th></th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table></div>
+    </div>
+  </div></main>
+
+  <div class="modal" id="modal"><div class="box" id="box"></div></div>
+</div>
+
+<script src="pricing.js"></script>
+<script src="auth.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>khyal — music producer</title>
+<meta name="description" content="khyal is a music producer and member of STAR Production. Mixing, mastering and collaborations.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="progress"></div>
+<canvas id="particles"></canvas>
+<div id="cursor-glow"></div>
+
+<nav><div class="wrap">
+  <a href="#top" class="logo">khyal<span>.</span></a>
+  <button id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  <div id="menu"><ul>
+    <li><a href="#top">home</a></li>
+    <li><a href="#about">about</a></li>
+    <li><a href="#releases">releases</a></li>
+    <li><a href="#pricing">pricing</a></li>
+    <li><a href="#contact">contact</a></li>
+    <li><a href="login.html" class="nav-login">login</a></li>
+  </ul></div>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+  <div class="wrap">
+    <span class="tag">music producer · STAR Production</span>
+    <h1>khyal</h1>
+    <p>producing, mixing and mastering music that's ready for the world.</p>
+    <div class="cta"><a class="btn p" href="#releases">listen now</a> <a class="btn" href="#pricing">mix &amp; master</a></div>
+    <div class="eq" aria-hidden="true"></div>
+  </div>
+  <div class="scroll" aria-hidden="true"></div>
+</header>
+
+<main>
+<section id="about"><div class="wrap">
+  <h2 class="reveal">about</h2>
+  <p class="sub reveal">khyal is a music producer with 2 years of hands-on production experience and a proud member of STAR Production.</p>
+  <div class="stats">
+    <div class="stat reveal"><b data-to="2" data-suffix=" yrs">0</b><span>production experience</span></div>
+    <div class="stat reveal"><b>STAR</b><span>member of STAR Production</span></div>
+    <div class="stat reveal"><b data-to="2">0</b><span>releases on Spotify</span></div>
+  </div>
+</div></section>
+
+<section id="releases"><div class="wrap">
+  <h2 class="reveal">releases</h2>
+  <p class="sub reveal">stream khyal's latest tracks on Spotify.</p>
+  <div class="rel">
+    <a class="track reveal" href="https://open.spotify.com/track/0V5n40G6ihzVmOI7RtV97j?si=c98bb84ce8c348be" target="_blank" rel="noopener">
+      <span class="play">▶</span><div><h3>Bharastachar</h3><small>mayankonthemic, khyal</small></div><span class="go">open in Spotify ↗</span></a>
+    <a class="track reveal" href="https://open.spotify.com/track/0ESIuRF1lwRSETX3r3c1mE?si=7d01e3db804844a1" target="_blank" rel="noopener">
+      <span class="play">▶</span><div><h3>Humsafar</h3><small>Aarav Kaushik, khyal</small></div><span class="go">open in Spotify ↗</span></a>
+  </div>
+</div></section>
+
+<section id="pricing"><div class="wrap">
+  <h2 class="reveal">mixing &amp; mastering</h2>
+  <p class="sub reveal">pick the plan that fits your stage. limited-time prices shown.</p>
+  <div class="grid" id="pricing-grid"></div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <h2 class="reveal">let's collab</h2>
+  <p class="sub reveal">want to work together? drop a mail.</p>
+  <a class="mail reveal" href="mailto:khyal.music.work@gmail.com">khyal.music.work@gmail.com</a>
+  <div class="social reveal">
+    <a class="btn" href="https://www.instagram.com/khyal160" target="_blank" rel="noopener">instagram · @khyal160</a>
+    <a class="btn" href="https://www.instagram.com/starprod.in" target="_blank" rel="noopener">instagram · STAR Production</a>
+  </div>
+</div></section>
+</main>
+
+<footer>© <span id="y"></span> khyal · member of STAR Production</footer>
+
+<script src="pricing.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

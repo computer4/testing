@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>login — khyal</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body class="app">
+<div class="bg-orbs"><div class="orb o1"></div><div class="orb o2"></div></div>
+<div class="auth-wrap">
+  <div class="auth">
+    <a class="logo" href="index.html">khyal<span>.</span></a>
+    <p class="tagline">client area — manage your mix &amp; master orders</p>
+    <div class="tabs"><button id="t-login" class="on" type="button">log in</button><button id="t-signup" type="button">sign up</button></div>
+
+    <form id="f-login" autocomplete="on">
+      <label for="l-email">email</label><input id="l-email" type="email" required autocomplete="email">
+      <label for="l-pass">password</label><input id="l-pass" type="password" required autocomplete="current-password">
+      <button class="btn p" type="submit">log in</button>
+    </form>
+
+    <form id="f-signup" class="hide" autocomplete="on">
+      <label for="s-name">full name</label><input id="s-name" required autocomplete="name">
+      <label for="s-email">email</label><input id="s-email" type="email" required autocomplete="email">
+      <label for="s-phone">phone / whatsapp (optional)</label><input id="s-phone" type="tel" autocomplete="tel">
+      <div class="row2">
+        <div><label for="s-pass">password</label><input id="s-pass" type="password" required minlength="6" autocomplete="new-password"></div>
+        <div><label for="s-pass2">confirm</label><input id="s-pass2" type="password" required autocomplete="new-password"></div>
+      </div>
+      <label for="s-plan">choose a plan</label>
+      <select id="s-plan"><option value="">decide later</option></select>
+      <label style="display:flex;gap:10px;align-items:flex-start;color:var(--text);cursor:pointer">
+        <input id="s-terms" type="checkbox" required style="width:auto;margin-top:4px">
+        <span>I agree to the <a href="#" id="openTerms" style="color:var(--a);text-decoration:underline">terms &amp; conditions</a></span>
+      </label>
+      <button class="btn p" type="submit">create account</button>
+    </form>
+
+    <div id="msg" class="msg"></div>
+    <p class="foot-links"><a href="index.html">← back to site</a></p>
+  </div>
+</div>
+<div class="modal" id="termsModal"><div class="box">
+  <button class="close" id="termsClose" type="button" aria-label="close">×</button>
+  <h3>terms &amp; conditions</h3>
+  <ol id="termsList" style="padding-left:20px;display:grid;gap:10px;color:var(--muted)"></ol>
+  <button class="btn p" id="termsOk" type="button" style="margin-top:20px">got it</button>
+</div></div>
+<script src="pricing.js"></script>
+<script src="terms.js"></script>
+<script src="email.js"></script>
+<script src="auth.js"></script>
+<script src="login.js"></script>
+</body>
+</html>
